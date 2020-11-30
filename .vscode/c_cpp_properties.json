@@ -1,0 +1,33 @@
+{
+    "env": {
+      "myDefaultIncludePath": [
+          "/usr/lib/llvm-11/include/c++/v1",
+          "${workspaceFolder}",
+          "${workspaceFolder}/include",
+          "${workspaceFolder}/build/include"
+      ],
+      "myCompilerPath": "/usr/bin/clang++-11"
+    },
+    "configurations": [
+      {
+        "name": "Linux-clang-11",
+        "intelliSenseMode": "clang-x64",
+        "includePath": ["${myDefaultIncludePath}"],
+        "defines": [""],
+        "forcedInclude": ["${workspaceFolder}/build/include/unifex/config.hpp"],
+        "compilerPath": "${myCompilerPath}",
+        "compilerArgs": [
+          "-fcoroutines-ts",
+          "-stdlib=libc++"
+        ],
+        "cStandard": "c11",
+        "cppStandard": "c++17",
+        "browse": {
+          "path": ["${workspaceFolder}"],
+          "limitSymbolsToIncludedHeaders": true,
+          "databaseFilename": ""
+        }
+      }
+    ],
+    "version": 4
+}
