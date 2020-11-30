@@ -1,0 +1,6 @@
+#!/bin/bash -x
+rm -rf build
+cmake -GNinja -S. -Bbuild \
+  -DCMAKE_CXX_FLAGS:STRING="-stdlib=libc++ -fcoroutines-ts -I/usr/lib/llvm-11/include/c++/v1" \
+  -DCMAKE_CXX_COMPILER:PATH=/usr/bin/clang++-11 \
+  -DCMAKE_EXE_LINKER_FLAGS:STRING="-L/usr/lib/llvm-11/lib"
